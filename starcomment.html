@@ -30,8 +30,8 @@
     <legend>Чат</legend>
 
     <p id="resultName">Имя</p>
-    <p>Аватар
-      <img id="picture" src="" alt="">
+    <p>
+      <img id="resultPicture" style="width: 200px;" src="" alt="">
     </p>
     <p id="resultComment">Сообщение</p>
   </fieldset>
@@ -40,6 +40,7 @@
     const name = document.querySelector("#name");
     let resultName = document.querySelector("#resultName");
     const picture = document.querySelector("#picture");
+    let resultPicture = document.querySelector("#resultPicture");
     const comment = document.querySelector("#comment");
     let resultComment = document.querySelector("#resultComment")
 
@@ -52,10 +53,9 @@
       // Имя
       let lowerName = name.value.toLowerCase();
       resultName.textContent = lowerName[0].toUpperCase() + lowerName.slice(1);
-      //ссылка на аватар
-      // picture = "https://cs13.pikabu.ru/post_img/big/2023/09/11/5/1694416670162565263.jpg";
+      //ссылка на аватар, пример ссылки на аватар = "https://cs13.pikabu.ru/post_img/big/2023/09/11/5/1694416670162565263.jpg"
+      resultPicture.src = picture.value;
       // сообщение
-
       const comment1 = 'buy ViAgRA now';
       reComment1 = comment1.replace("ViAgRA", "***");
       console.log(reComment1);
