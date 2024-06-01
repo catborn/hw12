@@ -40,10 +40,10 @@
     let resultName = document.querySelector("#resultName");
 
     const send = () => {
-      upperName
-      resultName.textContent = name.value[0].toUpperCase() + name.value.slice(1);
-      // resultName.innerHTML = name[0].toUpperCase() + name.slice(1);
-      console.log(resultName)
+      // Имя
+      let lowerName = name.value.toLowerCase();
+      resultName.textContent = lowerName[0].toUpperCase() + lowerName.slice(1);
+      //
     };
 
     button.addEventListener("click", send);
