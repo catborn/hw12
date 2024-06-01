@@ -44,23 +44,16 @@
     const comment = document.querySelector("#comment");
     let resultComment = document.querySelector("#resultComment")
 
-    // const comment1 = checkSpam('buy ViAgRA now'); //результат buy *** now
-    // const comment2 = checkSpam('free xxx'); //результат free ***
-    // const comment3 = checkSpam("innocent rabbit"); //результат innocent rabbit
-
-
     const checkSpam = () => {
-      // Имя
+      // Проверка имени
       let lowerName = name.value.toLowerCase();
       resultName.textContent = lowerName[0].toUpperCase() + lowerName.slice(1);
       //ссылка на аватар, пример ссылки на аватар = "https://cs13.pikabu.ru/post_img/big/2023/09/11/5/1694416670162565263.jpg"
       resultPicture.src = picture.value;
-      // сообщение
-      const comment1 = 'buy ViAgRA now';
-      reComment1 = comment1.replace("ViAgRA", "***");
-      console.log(reComment1);
-      resultComment.textContent = comment.value;
-      console.log(resultComment);
+      // сообщение пользователя с проверкой 'buy ViAgRA now' и 'free xxx'
+      const commentSpam = comment.value;
+      reComment = commentSpam.replace("xxx", "***").replace("ViAgRA", "***");
+      resultComment.textContent = reComment;
     };
 
     button.addEventListener("click", checkSpam);
