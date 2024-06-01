@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Word</title>
+</head>
+
+<body>
+  <h1>Random Word</h1>
+  <section>
+    <button class="button">Случайное слово</button>
+    <p>
+      Результат:
+    <p id="result">
+      <img src="./giraffe.svg" style="width: 30px;" alt="жирафик">
+      <img src="./giraffe.svg" style="width: 30px;" alt="жирафик">
+      <img src="./giraffe.svg" style="width: 30px;" alt="жирафик">
+      <img src="./giraffe.svg" style="width: 30px;" alt="жирафик">
+    </p>
+    </p>
+  </section>
+  <script>
+    const button = document.querySelector(".button");
+    const result = document.querySelector("#result");
+    const alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+
+    const randomWord = () => {
+      const letterOne = Math.floor(Math.random() * (33 - 1) + 1);
+      const letterTwo = Math.floor(Math.random() * (33 - 1) + 1);
+      const letterThree = Math.floor(Math.random() * (33 - 1) + 1);
+      const letterFour = Math.floor(Math.random() * (33 - 1) + 1);
+      result.innerHTML = alphabet[letterOne] + alphabet[letterTwo] + alphabet[letterThree] + alphabet[letterFour];
+    };
+
+    button.addEventListener("click", randomWord);
+  </script>
+</body>
+
+</html>
