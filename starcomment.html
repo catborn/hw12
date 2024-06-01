@@ -33,30 +33,37 @@
     <p>Аватар
       <img id="picture" src="" alt="">
     </p>
-    <p>Сообщение</p>
+    <p id="resultComment">Сообщение</p>
   </fieldset>
   <script>
     const button = document.querySelector("#button");
     const name = document.querySelector("#name");
+    let resultName = document.querySelector("#resultName");
     const picture = document.querySelector("#picture");
     const comment = document.querySelector("#comment");
-    let resultName = document.querySelector("#resultName");
+    let resultComment = document.querySelector("#resultComment")
+
+    // const comment1 = checkSpam('buy ViAgRA now'); //результат buy *** now
+    // const comment2 = checkSpam('free xxx'); //результат free ***
+    // const comment3 = checkSpam("innocent rabbit"); //результат innocent rabbit
 
 
-
-    const send = () => {
+    const checkSpam = () => {
       // Имя
       let lowerName = name.value.toLowerCase();
       resultName.textContent = lowerName[0].toUpperCase() + lowerName.slice(1);
       //ссылка на аватар
       // picture = "https://cs13.pikabu.ru/post_img/big/2023/09/11/5/1694416670162565263.jpg";
       // сообщение
-      const comment1 = checkSpam('buy ViAgRA now'); //результат buy *** now
-      const comment2 = checkSpam('free xxx'); //результат free ***
-      const comment3 = checkSpam("innocent rabbit"); //результат innocent rabbit
+
+      const comment1 = 'buy ViAgRA now';
+      reComment1 = comment1.replace("ViAgRA", "***");
+      console.log(reComment1);
+      resultComment.textContent = comment.value;
+      console.log(resultComment);
     };
 
-    button.addEventListener("click", send);
+    button.addEventListener("click", checkSpam);
 
   </script>
 </body>
