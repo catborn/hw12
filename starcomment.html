@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервис комментариев</title>
+</head>
+
+<body>
+  <fieldset>
+    <legend>Оставьте ваш комментарий</legend>
+    <Label>Введите ваше Имя</Label>
+    <input id="name" type="text">
+
+    <div>
+      <Label>Введите ссылку вашего аватара</Label>
+      <input type="text">
+    </div>
+    <div>
+      <Label>Оставьте комментарий</Label>
+      <input type="text">
+    </div>
+    <div>
+      <button id="button">Отправить</button>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Чат</legend>
+
+    <p id="resultName">Имя</p>
+    <p>Аватар</p>
+    <p>Сообщение</p>
+  </fieldset>
+  <script>
+    const button = document.querySelector("#button");
+    const name = document.querySelector("#name");
+
+    let resultName = document.querySelector("#resultName");
+
+    const send = () => {
+      upperName
+      resultName.textContent = name.value[0].toUpperCase() + name.value.slice(1);
+      // resultName.innerHTML = name[0].toUpperCase() + name.slice(1);
+      console.log(resultName)
+    };
+
+    button.addEventListener("click", send);
+
+  </script>
+</body>
+
+</html>

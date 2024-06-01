@@ -26,16 +26,16 @@
     let replacedText = newText.replace(/клён/g, "дубе")
     console.log(`5. Замена "клён" на "дубе": ${replacedText}`);
     // Приведите текст в переменной result к верхнему регистру и сохраните результат в переменную replacedText2
-    replacedText2 = result.toUpperCase();
+    let replacedText2 = result.toUpperCase();
     console.log(`6. Строка result в верхнем регистре: ${replacedText2}`);
     // Замените все вхождения слова клён на дуб в переменной result и сохраните результат в переменную replacedText3
-    replacedText3 = result.replace("клён", "дуб")
+    let replacedText3 = result.replace(/клён/g, "дуб")
     console.log(`7. Замена "клён" на "дуб" (все вхождения) в переменной result: ${replacedText3}`);
     // Найдите индекс первого вхождения слова моря в тексте и сохраните в переменную index
-    index = text.indexOf('моря');
+    let index = text.indexOf('моря');
     console.log(`8. Индекс первого вхождения "моря": ${index}`);
     // Измените только первую букву в переменной replacedText на заглавную без использования регулярных выражений и сохраните результат в переменную modifiedText
-    modifiedText = replacedText[0].toUpperCase() + replacedText.slice(1);
+    let modifiedText = replacedText[0].toUpperCase() + replacedText.slice(1);
     console.log(`9. Строка с измененной первой буквой: ${modifiedText}`);
   </script>
 </body>
