@@ -15,11 +15,11 @@
 
     <div>
       <Label>Введите ссылку вашего аватара</Label>
-      <input type="text">
+      <input id="picture" type="text">
     </div>
     <div>
       <Label>Оставьте комментарий</Label>
-      <input type="text">
+      <input id="comment" type="text">
     </div>
     <div>
       <button id="button">Отправить</button>
@@ -30,20 +30,30 @@
     <legend>Чат</legend>
 
     <p id="resultName">Имя</p>
-    <p>Аватар</p>
+    <p>Аватар
+      <img id="picture" src="" alt="">
+    </p>
     <p>Сообщение</p>
   </fieldset>
   <script>
     const button = document.querySelector("#button");
     const name = document.querySelector("#name");
-
+    const picture = document.querySelector("#picture");
+    const comment = document.querySelector("#comment");
     let resultName = document.querySelector("#resultName");
+
+
 
     const send = () => {
       // Имя
       let lowerName = name.value.toLowerCase();
       resultName.textContent = lowerName[0].toUpperCase() + lowerName.slice(1);
-      //
+      //ссылка на аватар
+      // picture = "https://cs13.pikabu.ru/post_img/big/2023/09/11/5/1694416670162565263.jpg";
+      // сообщение
+      const comment1 = checkSpam('buy ViAgRA now'); //результат buy *** now
+      const comment2 = checkSpam('free xxx'); //результат free ***
+      const comment3 = checkSpam("innocent rabbit"); //результат innocent rabbit
     };
 
     button.addEventListener("click", send);
