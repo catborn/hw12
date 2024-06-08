@@ -11,6 +11,7 @@
   <fieldset>
     <legend>Оставьте ваш комментарий</legend>
     <Label>Введите ваше Имя</Label>
+
     <input id="name" type="text">
 
     <div>
@@ -20,6 +21,10 @@
     <div>
       <Label>Оставьте комментарий</Label>
       <input id="comment" type="text">
+    </div>
+    <div>
+      <input id="showname" type="checkbox">
+      <Label for="showname">Скрыть имя</Label>
     </div>
     <div>
       <button id="button">Отправить</button>
@@ -33,6 +38,7 @@
     <p>
       <img id="resultPicture" style="width: 200px;" src="" alt="">
     </p>
+    <div id="commentdate"></div>
     <p id="resultComment">Сообщение</p>
   </fieldset>
   <script src="./starcomment.js"></script>
