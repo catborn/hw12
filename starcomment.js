@@ -20,9 +20,9 @@ let Images = [
 ];
 // console.log(Images.length);
 // console.log(Images[1]);
-console.log(Math.floor(Math.random() * Images.length));
+// console.log(Math.floor(Math.random() * Images.length));
 let randomNum = Math.floor(Math.random() * Images.length);
-console.log(randomNum);
+// console.log(randomNum);
 
 const checkSpam = () => {
   // Проверка имени
@@ -53,11 +53,5 @@ const checkSpam = () => {
   picture.value = "";
   comment.value = "";
 };
-
-// + нужно было убрать лишние пробелы в начале и в конце, если они есть, можно просто метод trim() использовать
-// - checkSpam(str) должно было быть отдельной функцией именно для проверки комментария,
-// + проверку можно было сделать в одном методе commentSpam.replace(/xxx|viagra/g, "***")
-// + по-хорошему было бы отчистить все поля в форме
-// - нет возможности добавить новый комментарий: по сути у тебя функция должна была бы создавать новый <div> с комментарием и добавлять его в твой <fieldset>
 
 button.addEventListener("click", checkSpam);
